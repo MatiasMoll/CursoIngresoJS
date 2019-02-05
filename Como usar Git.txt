@@ -1,1 +1,6 @@
-primero: 
+primero: git clone rep (1 vez al llegar)
+segundo: cd C + tab (ingresas a la carpeta CursoIngresoJS)
+tercero: git add . 
+cuarto: git commit -m
+quinto: git push 
+
