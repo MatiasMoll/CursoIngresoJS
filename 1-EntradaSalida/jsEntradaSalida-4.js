@@ -4,6 +4,10 @@
 */
 function mostrar()
 {
-
+	var dato = prompt ("¿De donde sos?:");
+	elNombre.value = dato;
+	alert(getElementById("elNombre"));
+			
 }
 
+	
