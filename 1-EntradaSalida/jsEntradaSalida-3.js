@@ -6,7 +6,7 @@ function mostrar()
 	alert(nombre);
 	*/
 
-		var nombre;
+	var nombre;
 
 	nombre =elNombre.value;
 	alert (nombre);
