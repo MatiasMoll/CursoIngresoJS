@@ -14,5 +14,6 @@ function mostrarAumento()
 
 		document.getElementById('resultado').value = resultado;
 
+
 	
 }
