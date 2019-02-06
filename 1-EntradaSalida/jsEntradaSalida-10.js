@@ -8,7 +8,9 @@ function mostrarAumento()
 	var descuento;
 	var resultado;
 
-	importe = parseInt(document.getElementById('importe').value);
+	importe = document.getElementById('importe').value;
+	
+
 	descuento = (importe * 25) / 100;
 	resultado = importe - descuento;
 

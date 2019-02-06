@@ -31,11 +31,7 @@ function restar()
 	primerNumero = numeroUno.value;
 	segundoNumero = numeroDos.value;
 
-	primerNumeroEntero = parseInt(primerNumero);
-	segundoNumeroEntero = parseInt(segundoNumero);
-
-
-	resultado = primerNumeroEntero - segundoNumeroEntero;
+	resultado = primerNumero - segundoNumero;
 	
 	alert("La resta es " + resultado);
 }
@@ -49,11 +45,7 @@ function multiplicar()
 	primerNumero = numeroUno.value;
 	segundoNumero = numeroDos.value;
 
-	primerNumeroEntero = parseInt(primerNumero);
-	segundoNumeroEntero = parseInt(segundoNumero);
-
-
-	resultado = primerNumeroEntero * segundoNumeroEntero;
+	resultado = primerNumero * segundoNumero;
 
 	alert("La multiplicacion es " +resultado);
 }
@@ -67,11 +59,7 @@ function dividir()
 	primerNumero = numeroUno.value;
 	segundoNumero = numeroDos.value;
 
-	primerNumeroEntero = parseInt(primerNumero);
-	segundoNumeroEntero = parseInt(segundoNumero);
-
-
-	resultado = primerNumeroEntero / segundoNumeroEntero;
+	resultado = primerNumero / segundoNumero;
 
 	alert("La division es " +resultado);
 }
