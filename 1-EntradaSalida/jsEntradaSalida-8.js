@@ -8,9 +8,13 @@ function SacarResto()
 	var divisor;
 	var resultado;
 
-	dividendo = parseInt(numeroDividendo.value);
-	divisor = parseInt(numeroDivisor.value);
-	resultado = dividendo % divisor;
-	
+	dividendo = numeroDividendo.value;
+	divisor = numeroDivisor.value;
+
+	dividendoEntero = parseInt(dividendo);
+	divisorEntero = parseInt(divisor);
+
+	resultado = dividendoEntero % divisorEntero;
+
 	alert("El resto es " +resultado);	
 }

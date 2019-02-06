@@ -7,10 +7,14 @@ function sumar()
 	var	segundoNumero;
 	var suma;
 
-	primerNumero = parseInt(numeroUno.value);
-	segundoNumero = parseInt(numeroDos.value);
-	suma = primerNumero + segundoNumero;
+	primerNumero = numeroUno.value;
+	segundoNumero = numeroDos.value;
+	
 
+	primerNumeroEntero = parseInt(primerNumero);
+	segundoNumeroEntero =parseInt(segundoNumero);
+	suma = primerNumeroEntero + segundoNumeroEntero;
+	
 	alert("La suma es " +suma);
 }
 
