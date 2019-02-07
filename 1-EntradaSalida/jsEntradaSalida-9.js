@@ -6,16 +6,16 @@ function mostrarAumento()
 {
 		var sueldo;
 		var aumento;
-		var resultado;
+		
 
 		sueldo = document.getElementById('sueldo').value;
 
 		sueldoEntero = parseInt(sueldo);
 
-		aumento = sueldoEntero * 10 / 100;
-		resultado = sueldoEntero + aumento;
+		aumento = sueldoEntero * 1.10;
+		
 
-		document.getElementById('resultado').value = resultado;
+		resultado.value = aumento;
 
 
 	
