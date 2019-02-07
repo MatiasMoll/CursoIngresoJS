@@ -11,7 +11,7 @@ function mostrarAumento()
 	importe = document.getElementById('importe').value;
 	
 
-	descuento = (importe * 25) / 100;
+	descuento = importe * 25 / 100;
 	resultado = importe - descuento;
 
 	document.getElementById('resultado').value = resultado;
