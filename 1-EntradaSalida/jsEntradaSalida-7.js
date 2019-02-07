@@ -7,8 +7,8 @@ ej.: "la Resta es 750"*/
 
 function sumar()
 {	
-	var numero1;
-	var numero2; 
+	var primerNumero;
+	var segundoNumero; 
 	var resultado;
 
 	primerNumero = numeroUno.value;
