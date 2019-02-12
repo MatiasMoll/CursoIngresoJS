@@ -7,12 +7,9 @@ function mostrar()
 	edadEntero = parseInt(edad);
 
 	if(edadEntero == 15)
-	{
-		alert("niña bonita");
-	}
-	else
-	{
-		alert("niña fea");
-	}
+		{
+			alert("niña bonita");
+		}
+		
 
-}//FIN DE LA FUNCIÓN
+}//FIN DE LA FUNCIÓN	
