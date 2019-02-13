@@ -1,36 +1,34 @@
 function mostrar()
 {
-	var primerNumero;
-	var segundoNumero;
-	var resultado;
-	
+	var valorCompra;
+	var pagoConTarjeta;
+		
+	productosComprados = prompt("Ingrese la cantidad de productos comprados");
+	valorCompra = prompt("Ingrese el valor de la compra");
+	pagoConTarjeta = prompt("Pago con tarjeta?");
 
-	primerNumero = prompt ("Ingrese el primer numero:");
-	segundoNumero = prompt ("Ingrese el segundo numero:");
-
-	primerNumeroEntero = parseInt(primerNumero);
-	segundoNumeroEntero = parseInt(segundoNumero);
-	
-		if(primerNumeroEntero == segundoNumeroEntero)
+	if (productosComprados > 2)
+	{
+		valorCompra = valorCompra * 0.90;
+		if(valorCompra > 2000)
 		{
-			alert(primerNumeroEntero + segundoNumeroEntero);
-		}else if (primerNumeroEntero>segundoNumeroEntero)
-			{
-				alert(primerNumeroEntero - segundoNumeroEntero);
-			}
-			else
-			{
-				if((primerNumeroEntero+segundoNumeroEntero)>10)
-				{
-					resultado = primerNumeroEntero + segundoNumeroEntero;
-					alert("La suma es " + resultado + " y supero el 10");
-				}
-				else
-				{
-					alert(primerNumeroEntero + segundoNumeroEntero);
-				}
-
-			}	
+			valorCompra = valorCompra *0.85;
+		}
+		if(pagoConTarjeta == "Si")
+		{
+			valorCompra = valorCompra * 1.10;	
+		}else
+		{
+			alert("El valor de la compra es " +valorCompra);	
+		}
+	}else if(pagoConTarjeta =="No")
+		{
+			alert("El valor de la compra es " + valorCompra);
+		}
+		else
+		{
+			valorCompra = valorCompra * 1.10;
+			alert("El valor de la compra es " +valorCompra);
+		}
 
 }
-

@@ -1,17 +1,23 @@
 
 function mostrar()
 {
-	var altura;
-	var ancho;
-	var perimetro;
+	var primerNombre;
+	var segundoNombre;
+	var primerEdad;
+	var segundaEdad;
+	var suma;
 
-	altura = prompt("Ingrese la altura:");
-	ancho = prompt ("Ingrese el ancho:");
-	
-	alturaEnMts = parseInt(altura);
-	anchoEnMts = parseInt(ancho);
-	perimetro = 2*(alturaEnMts + anchoEnMts);
+	primerNombre = prompt("Ingrese su nombre.");
+	segundoNombre = prompt("Ingrese el nombre de su compañero.");
 
-	alert("El perimetro es " + perimetro );
+	primerEdad = prompt("Ingrese su edad");
+	segundaEdad = prompt("Ingrese la edad de su compañero");
+
+	primerEdadEntera = parseInt(primerEdad);
+	segundaEdadEntera = parseInt(segundaEdad);
+
+	suma = primerEdadEntera + segundaEdadEntera;
+
+	alert("ustedes son "+primerNombre+" y "+segundoNombre+", sus edades son "+primerEdadEntera+" y "+segundaEdadEntera+" y la suma de sus edades es " + suma);
 
 }
