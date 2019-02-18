@@ -15,12 +15,36 @@ function comenzar()
 	//Genero el número RANDOM entre 1 y 100
 	 
 		//alert(numeroSecreto );
-	
+	numeroSecreto = Math.floor(Math.random()*100)+1;
+	contadorIntentos = 0;
+	console.log(numeroSecreto);
 
 }
 
 function verificar()
 {
+	var numeroIngresado;
+
+	numeroIngresado = numero.value;
+
+
+	contadorIntentos += 1;	
+	if(numeroSecreto>numeroIngresado)
+	{
+		alert("Te falta");
+	}else if ( numeroSecreto<numeroIngresado)
+	{
+		alert("Te pasaste");
+		}else
+	{
+		intentos.value = contadorIntentos;
+		alert("Felicidades, has adivinado el numero en " + contadorIntentos + " intentos");
+	}
+		
+	
+
+	
+
 	
 	
 }

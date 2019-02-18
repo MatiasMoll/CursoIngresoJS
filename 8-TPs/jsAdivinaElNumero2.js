@@ -15,14 +15,67 @@ var contadorIntentos;
 function comenzar()
 {
 	//Genero el número RANDOM entre 1 y 100
-	 
+	numeroSecreto = Math.floor(Math.random()*100) + 1;
+	contadorIntentos = 0
+	console.log(numeroSecreto); 
 	
 
 }
 
 function verificar()
 {
+	var numeroIngresado;
+	var clasificacion;
+
+	contadorIntentos+= 1;
 	
-	
+	numeroIngresado = numero.value
+
+	if(numeroSecreto>numeroIngresado)
+	{
+		alert("Te falta");
+	}else if(numeroSecreto<numeroIngresado)
+		{	
+		alert("Te pasaste");
+		}else
+		{
+			if(contadorIntentos<6)
+			{
+				switch(contadorIntentos)
+				{
+					case 1:
+					clasificacion = "Usted es un Psíquico";
+					break;
+
+					case 2:
+					clasificacion = "Excelente percepción";
+					break; 
+
+					case 3:
+					clasificacion = "Esto es suerte";
+					break;
+
+					case 4:
+					clasificacion = "Excelente técnica";
+					break;
+
+					case 5:
+					clasificacion = "Usted está en la media";
+					break;
+				}
+
+
+			}
+			else if(contadorIntentos>5 && contadorIntentos< 11)
+				{
+					clasificacion = "Falta técnica";
+				}else
+					{
+						clasificacion = "Afortunado en el amor!!";
+					}	
+		intentos.value = contadorIntentos;
+		alert("Felicidades, has adivinado el numero en " + contadorIntentos + " intentos. " + clasificacion );
+		}
+		
 
 }
