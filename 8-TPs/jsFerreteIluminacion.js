@@ -18,14 +18,17 @@ function CalcularPrecio ()
  	var precioConDesc;
 
 	
- 	marcaLamparitas = Marca.value;
+ 	marcaLamparitas = Marca.value;	
  	cantidadLamparitas = parseInt(Cantidad.value);
 
 
+	precioConDesc = 35 * cantidadLamparitas;
 	precio = 35 * cantidadLamparitas;
+	
 
- 	if(cantidadLamparitas>5)
- 	{
+ 	if(cantidadLamparitas>5)	
+ 	{	
+
  		precioConDesc = precio / 2;
  	}else if(cantidadLamparitas == 5)
  		{
@@ -61,11 +64,11 @@ function CalcularPrecio ()
  									precioConDesc = precio * 0.95;
  								}
  						}
- 	if(precioConDesc > 120)
+ 	if(precioConDesc > 120)	
  	{
  		impuesto = precioConDesc * 10 / 100;
  		precioConDesc = precioConDesc + impuesto;
- 		 ("IIBB Usted pago " + precioConDesc + " , siendo "+impuesto+" el impuesto que se pagó.");
+ 		alert ("IIBB Usted pago " + precioConDesc + " , siendo "+impuesto+" el impuesto que se pagó.");
  	}
  	precioDescuento.value = precioConDesc;
 }

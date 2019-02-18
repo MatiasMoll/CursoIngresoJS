@@ -41,29 +41,21 @@ function verificar()
 		{
 			if(contadorIntentos<6)
 			{
-				switch(contadorIntentos)
+				clasificacion = "Usted está en la media";
+
+				if(contadorIntentos == 4)
 				{
-					case 1:
-					clasificacion = "Usted es un Psíquico";
-					break;
-
-					case 2:
-					clasificacion = "Excelente percepción";
-					break; 
-
-					case 3:
-					clasificacion = "Esto es suerte";
-					break;
-
-					case 4:
 					clasificacion = "Excelente técnica";
-					break;
-
-					case 5:
-					clasificacion = "Usted está en la media";
-					break;
-				}
-
+				}else if(contadorIntentos==3)
+					{
+						clasificacion =  "Esto es suerte";
+					}else if (contadorIntentos==2)
+					 {
+					 	clasificacion = "Excelente percepción";
+					 }else if (contadorIntentos == 1)
+					 	{
+					 		clasificacion = "Usted es un Psíquico";
+					 	}
 
 			}
 			else if(contadorIntentos>5 && contadorIntentos< 11)
