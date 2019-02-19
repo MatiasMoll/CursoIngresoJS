@@ -2,9 +2,10 @@ function mostrar()
 {
 //tomo la edad  
 var laHora = document.getElementById('hora').value;
+var laHoraEntero = parseInt(laHora);
 var mensaje;
 
-	if(laHora>=0 && laHora<25)
+	if(laHoraEntero>=0 && laHoraEntero<25)
 	{
 		switch(laHora)
 		{
