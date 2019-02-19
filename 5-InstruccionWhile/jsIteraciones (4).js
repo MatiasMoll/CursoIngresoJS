@@ -10,7 +10,7 @@ function mostrar()
 
 	while(numeroEntero < 0 || numeroEntero > 9)
 	{
-		numero = prompt("Numero invalido, reintente: ");
+		numeroEntero = parseInt(prompt("Numero invalido, reintente: "));
 	}
 
 	alert("Numero Validado"); 
