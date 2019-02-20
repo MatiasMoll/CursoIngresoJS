@@ -5,7 +5,8 @@ function mostrar()
 	hora = prompt("Ingrese una hora");
 	horaEntero = parseInt(hora);
 
-	if(horaEntero < 0 || horaEntero > 24)
+
+	/*if(horaEntero < 0 || horaEntero > 24)
 	{
 		alert("Hora invalida");
 	}	else if (horaEntero > 0 && horaEntero < 6)
@@ -51,7 +52,16 @@ function mostrar()
 				default:
 					alert("Es de tarde");		
 			}
-		}
+		}*/
+		switch(horaEntero)
+		{
+			if(horaEntero < 0 || horaEntero > 24)
+			{
+				alert("Hora invalida");
+			}
 
+
+
+		}
 
 }
