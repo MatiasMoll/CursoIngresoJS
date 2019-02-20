@@ -10,4 +10,69 @@ e.	Se pedirán un número positivo y se mostrará la cantidad de números Primos
 function ComenzarIngreso () 
 {
  	
+
+
+
+}
+
+function NumerosPares()
+{
+	var contador;
+
+ 	contador = numero.value;
+ 
+
+	while(contador>0)
+	{
+		contador -= 1;
+		if(contador % 2 == 0)
+		{
+			console.log(contador);
+		}
+	}
+
+}
+
+function NumerosImpares()
+{
+	var contador;
+
+ 	contador = numero.value;
+ 
+
+	while(contador>0)
+	{
+		contador -= 1;
+		if(contador % 2 == 1)
+		{
+			console.log(contador);
+		}
+	}
+}
+
+function NumerosDivisibles()
+{
+	var contador;
+	var dato;
+
+	contador = 100;
+	dato = numero.value;
+
+	while(contador>0)
+	{
+		contador -= 1;
+		if(contador % dato  == 0)
+		{
+			console.log(contador);
+		}
+	}
+}
+
+function VerificarPrimo()
+{
+	var dato;
+
+	dato = numero.value;
+
+	while 
 }
