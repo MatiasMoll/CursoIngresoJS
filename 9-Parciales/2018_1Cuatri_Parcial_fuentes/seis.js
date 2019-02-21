@@ -55,10 +55,7 @@ function mostrar()
 		}*/
 		switch(horaEntero)
 		{
-			if(horaEntero < 0 || horaEntero > 24)
-			{
-				alert("Hora invalida");
-			}
+			
 
 
 

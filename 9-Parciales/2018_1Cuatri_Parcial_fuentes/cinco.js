@@ -1,47 +1,58 @@
 function mostrar()
 {
-	var planeta;
+	var precioHabitacion;
+	var precioFinal;
+	var tipoDePago;
+	var promocion;
+	var descuento;
 
-	planeta = prompt("Ingrese un planeta");
-<<<<<<< HEAD
+	precioHabitacion = prompt("Ingrese el valor de la habitacion: ");
+	tipoDePago = prompt("Ingrese el tipo de pago");
+	promocion = prompt("Ingrese su promocion");
 	
-	switch (planeta)
+
+	precioHabitacionEnPesos = parseInt(precioHabitacion);
+	
+
+	switch(tipoDePago)
 	{
-		case "mercurio":
-			alert("Aca hace mas Calor");
+		case "Visa":
+		case "MercadoPago":
+			descuento = 0.90;
 			break;
+		case "PayPal":
+			switch(promocion)
+			{
+				case "Todo incluido":
+					descuento = 0.75;
+					break;
+				default:	
+					descuento = 0.85;
+					break;
 
-		case "venus":
-			alert("Aca hace mas calor");
-			break;
-			
-		case "tierra";
-=======
-
-	switch (planeta)
-	{
-		case "Mercurio":
-			alert("Aca hace mucho calor");
-			break;
-
-		case "Venus":
-			alert("Aca hace mucho calor");
-			break;
-
-		case "Tierra":
->>>>>>> 874ee5a34b8f6dc99d91051fa7d368af62fc74c3
-			alert("Aca vivimos");
-			break;
-
+			}
+		break;	
+		case "Efectivo":
+			switch(promocion)
+			{
+				case "Todo incluido":
+					descuento = 0.65;			
+					break;
+				case "Solo desayuno":
+					descuento = 0.70;
+					break;
+				default:
+					descuento = 0.80;
+					break;			
+			}
+		break;
 		default:
-<<<<<<< HEAD
-			alert("aca hace mas frio");
-
-	}	
-=======
-			alert("Aca hace mas frio");		
-
+			descuento = 0.95;
+			break;		
 
 	}
->>>>>>> 874ee5a34b8f6dc99d91051fa7d368af62fc74c3
+
+	precioFinal = precioHabitacion * descuento;
+	alert("El precio por la habitacion pedida es: "+precioFinal);
+
 }

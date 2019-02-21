@@ -8,7 +8,7 @@ function mostrar()
 	numeroEntero = parseInt(numero);
 	
 
-	while(numeroEntero < 0 || numeroEntero > 9)
+	while(numeroEntero < 0 || numeroEntero > 9 )
 	{
 		numeroEntero = parseInt(prompt("Numero invalido, reintente: "));
 	}

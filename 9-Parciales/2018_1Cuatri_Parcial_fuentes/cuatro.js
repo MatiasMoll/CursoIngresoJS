@@ -1,95 +1,65 @@
+		//ingresar 4 importes.
+		// Primero mostrar el importe mas alto.
+		//Segundo, si la suma de los importes supera los 100 tiene un desc del 10%.
+		//Tercero, si la suma es mayor  a 50  tiene desc del 5%.
+		//Cuarto, si la suma es menor a 50, tiene un 15% de recargo.
+
 function mostrar()
 {
-<<<<<<< HEAD
-	var primerNumero;
-	var segundoNumero;
-<<<<<<< HEAD
-	var	primerNumeroEntero;
-	var segundoNumeroEntero; 
-	var resultado;
-
-	primerNumero = prompt("Ingrese el primer numero.");
-	segundoNumero = prompt("Ingrese el segundo numero.");
-	primerNumeroEntero = parseInt(primerNumero);
-	segundoNumeroEntero = parseInt(segundoNumero);
-
-	resultado = primerNumeroEntero + segundoNumeroEntero;
-
-
-	if (primerNumero == segundoNumero)
-	{
-		alert(primerNumero + segundoNumero);
-
-	}else if (primerNumeroEntero > segundoNumeroEntero)
-	 {
-	 	alert (primerNumeroEntero - segundoNumeroEntero	);
-	 } else if (resultado > 10)
-	 	{
-	 		alert("la suma es "+ resultado + " y supero el 10");
-	 	}else
-	 	{
-	 		alert(resultado);
-	 	}
-
-=======
-	var resultado;
+	var precioUno;
+	var precioDos;
+	var precioTres;
+	var precioCuatro;
+	var sumatoria;
+	var mayor;
+	var recuento;
 	
->>>>>>> 449ef8ee6ad974edbc8b935b2634bda43c967ace
 
-	primerNumero = prompt ("Ingrese el primer numero:");
-	segundoNumero = prompt ("Ingrese el segundo numero:");
-
-	primerNumeroEntero = parseInt(primerNumero);
-	segundoNumeroEntero = parseInt(segundoNumero);
-	
-		if(primerNumero == segundoNumero)
-		{
-			alert(primerNumero + segundoNumero);
-		}else if (primerNumeroEntero>segundoNumeroEntero)
-			{
-				alert(primerNumeroEntero - segundoNumeroEntero);
-			}
-			else
-			{
-				alert(primerNumeroEntero + segundoNumeroEntero);
-				if((primerNumeroEntero+segundoNumeroEntero)>10)
-				{
-					resultado = primerNumeroEntero + segundoNumeroEntero;
-					alert("La suma es " + resultado "y supero el 10");
-				}
-			}	
-}
-
-=======
-	var valorCompra;
-	var pagoConTarjeta;
-	var productosComprados;
-	var importeFinal;
 		
-	productosComprados = prompt("Ingrese la cantidad de productos comprados");
-	valorCompra = prompt("Ingrese el valor de la compra");
-	pagoConTarjeta = prompt("Pago con tarjeta?");
-	importeFinal = valorCompra;
+	mayor = 0;
+	precioUno = parseInt(prompt("Ingrese el primer precio"));
+	precioDos = parseInt(prompt("Ingrese el segundo precio"));
+	precioTres = parseInt(prompt("Ingrese el tercero precio"));
+	precioCuatro = parseInt(prompt("Ingrese el cuarto precio"));
+	
+	sumatoria = precioUno + precioDos + precioTres + precioCuatro;	
+		
+	
 
-	if (productosComprados > 2)
+	if(precioUno > precioDos)
 	{
-		if(valorCompra > 2000)
+		mayor = precioUno;
+	}else 
 		{
-			importeFinal = valorCompra * 0.75;
-		} else 
-		{
-			importeFinal = valorCompra * 0.90;
+			mayor = precioDos;
+			if(mayor < precioTres)
+			{
+				if (mayor < precioCuatro)
+					{
+						mayor = precioCuatro;
+					}else
+						{
+							mayor = precioTres;
+						}
+				 
+			}
 		}
-	}
-	if(pagoConTarjeta =="si")
-	{
-		importeFinal = importeFinal * 1.1;
-	}
-	alert("El valor de la compra es "+importeFinal); 
-	
-	/* por que  if else?-*//*Si es un solo producto tambien tiene recargo por tarjeta?*/
-	
-		/* un solo alert en todo el codigo*/
 
-}
->>>>>>> 874ee5a34b8f6dc99d91051fa7d368af62fc74c3
+	if(sumatoria > 100)
+	{
+		recuento =  0.90;
+	}else if(sumatoria < 50 )
+		{
+			recuento =  1.15;
+		}else
+			{
+				recuento =  0.95;
+			}	
+
+	sumatoria *= recuento;
+			
+	alert("El mayor precio es "+mayor+" y el total es "+sumatoria+".");
+
+}		
+
+
