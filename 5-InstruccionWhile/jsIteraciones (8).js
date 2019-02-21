@@ -6,13 +6,14 @@ function mostrar()
 	var negativo=1;
 	var numeroIngresado;
 	
-	var respuesta='si';
+	var respuesta ='si';
 	contador = 0;
 
-	while(respuestaS="si")
+	while(respuesta == "si")
 	{
 		contador +=1;	
-		numeroIngresado = parseInt(prompt("Ingrese el "+contador+" numero"));
+		numeroIngresado = prompt("Ingrese el "+contador+" numero");
+		numeroIngresado = parseInt(numeroIngresado);
 		if(numeroIngresado>=0)
 		{
 			positivo += numeroIngresado;
