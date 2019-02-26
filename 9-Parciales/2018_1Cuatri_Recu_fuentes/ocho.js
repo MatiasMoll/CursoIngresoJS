@@ -27,7 +27,7 @@ function mostrar()
 		}	
 
 		letra = prompt("Ingrese una letra: ");
-		while(!isNaN(letra))
+		while(!isNaN(letra) || letra.lenght() > 1)
 		{
 			letra = prompt("Reingrese una letra valida(No numero!): ");
 		}
@@ -35,37 +35,46 @@ function mostrar()
 		if(numeroIngresado % 2 == 0)
 		{
 			numerosPares += 1;
-		}else if(numeroIngresado % 2 != 0)
+		}else
+		{ 
+			if(numeroIngresado % 2 != 0)
 			{
 				numerosImpares += 1;
 			}else
 				{
 					cantCeros +=1;
 				}
+		}		
 
 		if(numeroIngresado>0)
 		{
 			positivo += numeroIngresado;
 			numeroPositivos +=1;
-		}else if(numeroIngresado<0)
+		}else
 			{
-				negativo += numeroIngresado;
-			}
+				if(numeroIngresado<0)
+				{
+					negativo += numeroIngresado;
+				}
+			}	
 
 		if(contador == 1)
 		{
 			maximo = numeroIngresado;
 			minimo = numeroIngresado;
 			letraMaximo = letra;
-		}else if(maximo < numeroIngresado)
+		}else
 			{
-				maximo = numeroIngresado;
-				letraMaximo = letra;
-			}else
+			if(maximo < numeroIngresado)
 				{
-					minimo  = numeroIngresado;
-					letra	= letra;
-				}	
+					maximo = numeroIngresado;
+					letraMaximo = letra;
+				}else
+					{
+						minimo  = numeroIngresado;
+						letra	= letra;
+					}
+			}			
 		respuesta = prompt("Desea seguir agregando?: ");		
 
 	}	
