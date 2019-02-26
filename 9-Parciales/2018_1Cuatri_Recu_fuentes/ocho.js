@@ -27,7 +27,7 @@ function mostrar()
 		}	
 
 		letra = prompt("Ingrese una letra: ");
-		while(!isNaN(letra) || letra.lenght() > 1)
+		while(!isNaN(letra) || letra.length > 1)
 		{
 			letra = prompt("Reingrese una letra valida(No numero!): ");
 		}
