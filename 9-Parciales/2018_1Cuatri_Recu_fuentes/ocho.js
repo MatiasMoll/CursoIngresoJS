@@ -40,10 +40,7 @@ function mostrar()
 			if(numeroIngresado % 2 != 0)
 			{
 				numerosImpares += 1;
-			}else
-				{
-					cantCeros +=1;
-				}
+			}
 		}		
 
 		if(numeroIngresado>0)
@@ -56,7 +53,10 @@ function mostrar()
 				{
 					negativo += numeroIngresado;
 				}
-			}	
+			}else
+				{
+					cantCeros +=1;
+				}	
 
 		if(contador == 1)
 		{
@@ -80,7 +80,4 @@ function mostrar()
 	}	
 	promedio = positivo / numeroPositivos;
 	alert("La letra del numero maximo es: "+letraMaximo +", su maximo es "+maximo+",su minimo "+minimo+", el promedio "+promedio+",la suma de los negativos "+negativo+", la cantidad de 0 "+cantCeros+", los numeros pares "+numerosPares+" y los numeros impares "+numerosImpares);
-
-
-
 }
