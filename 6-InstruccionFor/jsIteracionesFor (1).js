@@ -1,5 +1,7 @@
 function mostrar()
 {	
+		var NombreRazaElegida;
+		var ContadorRaza=0;
 		var razaElegida=0;
 		var guerrero = 
 		{
@@ -31,7 +33,8 @@ function mostrar()
 			switch(razaElegida)
 			{
 				case 1:
-					razaElegida="Guerrero";
+					ContadorRaza ++;
+					NombreRazaElegida="Guerrero";
 					var razaElegida = new Object();
 					razaElegida.vida = Math.floor(Math.random()*250)+100;
 					razaElegida.fuerza = Math.floor(Math.random()*75)+75;
@@ -40,7 +43,8 @@ function mostrar()
 				break;
 
 				case 2:
-					razaElegida="Mago";
+					ContadorRaza ++;
+					NombreRazaElegida="Mago";
 					var razaElegida = new Object();
 					razaElegida.vida = Math.floor(Math.random()*150)+25;
 					razaElegida.fuerza = Math.floor(Math.random()*25)+30;
@@ -49,7 +53,8 @@ function mostrar()
 				break;
 
 				case 3:
-					razaElegida="Asesino";
+					ContadorRaza++;
+					NombreRazaElegida="Asesino";
 					var razaElegida = new Object();
 					razaElegida.vida = Math.floor(Math.random()*200)+50;
 					razaElegida.fuerza = Math.floor(Math.random()*50)+50;
@@ -60,7 +65,7 @@ function mostrar()
 			}
 			
 
-			document.write("El "+razaElegida+contador+" tiene "+razaElegida.vida+" puntos de vida, "+razaElegida.fuerza+" puntos de fuerza, "+razaElegida.velocidad+" puntos de velocidad<br>");
+			document.write("El "+NombreRazaElegida+ContadorRaza+" tiene "+razaElegida.vida+" puntos de vida, "+razaElegida.fuerza+" puntos de fuerza, "+razaElegida.velocidad+" puntos de velocidad y "+razaElegida.inteligencia+"puntos de inteligencia <br>");
 		}
 
 /*

@@ -1,12 +1,12 @@
 function mostrar()
 {
+	var nombre;
+	var localidad;
 
-  var identificacion;
-  var lugarDeResidencia;
+	nombre = elNombre.value;
+	localidad = laLocalidad.value;
 
-  identificacion = elNombre.value;
-  lugarDeResidencia = laLocalidad.value;
-
-  alert("Usted es " + identificacion +" y vive en la localidad de " + lugarDeResidencia);
+	alert("Usted es "+nombre+" y vive en "+localidad+".");
+  
 
 }

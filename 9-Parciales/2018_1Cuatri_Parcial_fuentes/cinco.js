@@ -1,58 +1,29 @@
 function mostrar()
 {
-	var precioHabitacion;
-	var precioFinal;
-	var tipoDePago;
-	var promocion;
-	var descuento;
+	var planeta;
+	var mensaje;
 
-	precioHabitacion = prompt("Ingrese el valor de la habitacion: ");
-	tipoDePago = prompt("Ingrese el tipo de pago");
-	promocion = prompt("Ingrese su promocion");
-	
+	planeta = prompt("Ingrese un planeta: ");
 
-	precioHabitacionEnPesos = parseInt(precioHabitacion);
-	
-
-	switch(tipoDePago)
+	switch(planeta)
 	{
-		case "Visa":
-		case "MercadoPago":
-			descuento = 0.90;
+		case "mercurio":
+		case "venus":
+			mensaje = "Aca hace mas calor";
 			break;
-		case "PayPal":
-			switch(promocion)
-			{
-				case "Todo incluido":
-					descuento = 0.75;
-					break;
-				default:	
-					descuento = 0.85;
-					break;
-
-			}
-		break;	
-		case "Efectivo":
-			switch(promocion)
-			{
-				case "Todo incluido":
-					descuento = 0.65;			
-					break;
-				case "Solo desayuno":
-					descuento = 0.70;
-					break;
-				default:
-					descuento = 0.80;
-					break;			
-			}
-		break;
+		case "tierra":
+			mensaje = "Aca vivimos";
+			break;
+		case "marte":
+		case "jupiter":
+		case "saturno":
+		case "urano":
+		case "neptuno":
+			mensaje = "Aca hace mas frio";
+			break;
 		default:
-			descuento = 0.95;
-			break;		
-
+			mensaje = "Planeta invalido, reintente";
+			break;
 	}
-
-	precioFinal = precioHabitacion * descuento;
-	alert("El precio por la habitacion pedida es: "+precioFinal);
-
+	alert(mensaje);	
 }

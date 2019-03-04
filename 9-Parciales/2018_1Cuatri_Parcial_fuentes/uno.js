@@ -1,13 +1,17 @@
 
 function mostrar()
 {
+	var ancho;
+	var largo;
+	var resultado;
 
-	altura = prompt("Ingrese la altura:");
-	ancho = prompt ("Ingrese el ancho:");
-	
-	alturaEnMts = parseInt(altura);
-	anchoEnMts = parseInt(ancho);
-	perimetro = 2*(alturaEnMts + anchoEnMts);
+	ancho = prompt("Ingrese el ancho: ");
+	ancho = parseInt(ancho);
 
-	alert("El perimetro es " + perimetro );
+	largo = prompt("Ingrese el largo: ");
+	largo = parseInt(largo);
+
+	resultado = 2*(largo + ancho);
+
+	alert("El perimetro es: "+resultado);
 }

@@ -6,60 +6,36 @@
 
 function mostrar()
 {
-	var precioUno;
-	var precioDos;
-	var precioTres;
-	var precioCuatro;
-	var sumatoria;
-	var mayor;
-	var recuento;
+	var numeroUno;
+	var numeroDos;
+	var numeroUnoEntero;
+	var numeroDosEntero;
+	var mensaje;
 	
+	numeroUno = prompt("Ingrese el primer numero: ");
+	numeroUnoEntero = parseInt(numeroUno);
 
-		
-	mayor = 0;
-	precioUno = parseInt(prompt("Ingrese el primer precio"));
-	precioDos = parseInt(prompt("Ingrese el segundo precio"));
-	precioTres = parseInt(prompt("Ingrese el tercero precio"));
-	precioCuatro = parseInt(prompt("Ingrese el cuarto precio"));
-	
-	sumatoria = precioUno + precioDos + precioTres + precioCuatro;	
-		
-	
+	numeroDos = prompt("Ingrese el segundo numero: ");
+	numeroDosEntero = parseInt(numeroDos);
 
-	if(precioUno > precioDos)
+	if(numeroUnoEntero == numeroDosEntero)
 	{
-		mayor = precioUno;
-	}else 
+		mensaje = numeroUno + numeroDos;
+	}else
 		{
-			mayor = precioDos;
-			if(mayor < precioTres)
+			if(numeroUnoEntero>numeroDosEntero)
 			{
-				if (mayor < precioCuatro)
+				mensaje = numeroUnoEntero - numeroDosEntero;
+			}else
+				{
+					mensaje = numeroUnoEntero + numeroDosEntero;
+					if(mensaje>10)
 					{
-						mayor = precioCuatro;
-					}else
-						{
-							mayor = precioTres;
-						}
-				 
-			}
+						mensaje = "la suma es "+mensaje+" y supero el 10";
+					}
+				}
 		}
-
-	if(sumatoria > 100)
-	{
-		recuento =  0.90;
-	}else if(sumatoria < 50 )
-		{
-			recuento =  1.15;
-		}else
-			{
-				recuento =  0.95;
-			}	
-
-	sumatoria *= recuento;
-			
-	alert("El mayor precio es "+mayor+" y el total es "+sumatoria+".");
-
-}		
-
+	alert(mensaje);
+}
+	
 
